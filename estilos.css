@@ -1,0 +1,191 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #172554;
+  background: #f1f5f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --azul: #1d4ed8;
+  --azul-oscuro: #1e3a8a;
+  --borde: #dbe4f0;
+  --texto-suave: #475569;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: min(100% - 2rem, 920px);
+  margin: 2rem auto;
+  line-height: 1.6;
+}
+
+header {
+  margin-bottom: 1.5rem;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  border-radius: 1.25rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--azul-oscuro), #2563eb);
+  box-shadow: 0 12px 30px rgb(30 58 138 / 18%);
+}
+
+header h1 {
+  margin: 0.5rem 0;
+  line-height: 1.2;
+}
+
+header p {
+  margin-bottom: 0;
+  color: #dbeafe;
+}
+
+header a {
+  color: #bfdbfe;
+}
+
+main {
+  display: grid;
+  gap: 1.25rem;
+}
+
+section,
+form {
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 5px 18px rgb(15 23 42 / 5%);
+}
+
+h1,
+h2 {
+  color: var(--azul-oscuro);
+}
+
+header h1 {
+  color: #fff;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+p,
+li {
+  color: var(--texto-suave);
+}
+
+a {
+  color: var(--azul);
+  font-weight: 600;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--azul-oscuro);
+}
+
+ul {
+  padding-left: 1.4rem;
+}
+
+main > section > ul a {
+  display: inline-block;
+  padding: 0.2rem 0;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  color: #334155;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.65rem;
+  color: #172554;
+  background: #fff;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--azul);
+  outline: 3px solid rgb(37 99 235 / 16%);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  justify-self: start;
+  padding: 0.75rem 1.15rem;
+  border: 0;
+  border-radius: 0.65rem;
+  color: #fff;
+  background: var(--azul);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+button:hover {
+  background: var(--azul-oscuro);
+  transform: translateY(-1px);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+strong {
+  color: var(--azul-oscuro);
+}
+
+body > h1 {
+  margin: 0 0 1.25rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--azul-oscuro), #2563eb);
+}
+
+body > form {
+  margin: 1rem 0;
+}
+
+body > p,
+body > ul {
+  padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: min(100% - 1rem, 920px);
+    margin: 0.5rem auto;
+  }
+
+  header,
+  section,
+  form {
+    border-radius: 0.8rem;
+  }
+
+  button {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
